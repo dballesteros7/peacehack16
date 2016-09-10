@@ -12,6 +12,7 @@ const styles = {
 };
 const interpolator = interpolateCubehelixLong('#F44336', '#4CAF50');
 
+
 class ThemeChip extends Component {
 
   render() {
