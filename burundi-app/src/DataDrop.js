@@ -39,7 +39,6 @@ class DataDrop extends Component {
             return alert("File not redable")
         }
         return alert(evt.target.error)
-
     }
 
     getData() {
