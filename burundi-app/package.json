@@ -25,5 +25,6 @@
   },
   "eslintConfig": {
     "extends": "./node_modules/react-scripts/config/eslint.js"
-  }
+  },
+  "homepage": "http://dballesteros7.github.io/peacehack16"
 }

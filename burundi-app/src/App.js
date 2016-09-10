@@ -12,14 +12,28 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 
 class App extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      cityData: []
+    };
+  }
+
+  onDataReady(data) {
+    this.setState({
+      cityData: data
+    });
+  }
+
   render() {
     return (
         <MuiThemeProvider>
           <div className="App">
             <AppBar title="PAP Burundi" showMenuIconButton={false}/>
             <InfoBar />
-            <BurundiMap />
-            <DataDrop/>
+            <BurundiMap cityData={this.state.cityData}/>
+            <DataDrop onData={this.onDataReady.bind(this)}/>
           </div>
         </MuiThemeProvider>
     );

@@ -26,29 +26,23 @@ class DataDrop extends Component {
         if (!window.FileReader) {
             alert('Please use modern browser.')
         }
-
-        // deferred object
-        DataDrop.data = new Promise((res, rej) => {
-            DataDrop.resolve = res
-            DataDrop.reject = rej
-        })
     }
 
-    static onDrop(files) {
+    onDrop(files) {
         let reader = new FileReader()
         reader.readAsText(files[0])
-        reader.onload = DataDrop.loadHandler
-        reader.onerror = DataDrop.errorHandler
+        reader.onload = this.loadHandler.bind(this)
+        reader.onerror = this.errorHandler.bind(this)
     }
 
     // ISO 3166-1 country code,FIPS 5-2 subdivision code, GNS FD, GNS UFI,ISO 639-1 language code, language script, name, latitude, longitude
-    static loadHandler(event) {
+    loadHandler(event) {
         let allData = event.target.result.split(/\r\n|\n/)
 
         // drop header
         allData.shift()
 
-        DataDrop.resolve(allData
+        const resolvedData = allData
             .map(r =>
                 // here should be ;
                 r.split(',')
@@ -57,10 +51,13 @@ class DataDrop extends Component {
                 name: r[6],
                 lat: Number(r[7]),
                 lng: Number(r[8])
-            })))
+            }))
+        if (this.props.onData) {
+          this.props.onData(resolvedData)
+        }
     }
 
-    static errorHandler(evt) {
+    errorHandler(evt) {
         if ("NotReadableError" === evt.target.error.name) {
             return alert("File not readable")
         }
@@ -75,7 +72,7 @@ class DataDrop extends Component {
         return (
             <Paper zDepth={2} style={styles.container}>
               <Dropzone style={styles.zone}
-                  onDrop={DataDrop.onDrop}
+                  onDrop={this.onDrop.bind(this)}
                   accept={"text/csv"}>
                   <div>Drop your data, or click to select files to upload.</div>
               </Dropzone>

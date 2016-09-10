@@ -8,3 +8,10 @@
 .map-container > svg {
   flex: 1 0 auto;
 }
+
+.infoWindow {
+  max-width: 300px;
+  min-width: 200px;
+  flex: 1 0 auto;
+}
+

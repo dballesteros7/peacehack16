@@ -70,10 +70,10 @@ class InfoBar extends Component {
         <div className="infoBar">
           <div className="headlineRow">
             <span className="headline-left">
-              Date of survey: {moment().format('LL')}
+              Survey date: {moment().format('LL')}
             </span>
             <span>
-              Already 10k person participated
+              Already 10k people have participated
             </span>
           </div>
           <div className="demoGenderRow">
