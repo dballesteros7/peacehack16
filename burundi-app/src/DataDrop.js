@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import Dropzone from 'react-dropzone'
 
 class DataDrop extends Component {
@@ -10,11 +10,13 @@ class DataDrop extends Component {
     render() {
         return (
             <div>
-                <Dropzone onDrop={DataDrop.onDrop}>
+                <Dropzone
+                    onDrop={DataDrop.onDrop}
+                    accept={"text/csv"}>
                     <div>Drop your data, or click to select files to upload.</div>
                 </Dropzone>
             </div>
-        );
+        )
     }
 }
 
