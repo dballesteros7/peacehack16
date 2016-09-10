@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import {geoPath, geoMercator} from 'd3-geo';
-import * as topojson from 'topojson';
-
-const burundiTopo = require('./burundi-topo.json');
+const burundiTopo = require('./burundi.json');
+const burundiCommunes = require('./burundi-communes.json');
 
 class BurundiMap extends Component {
 
   constructor() {
     super();
     this.state = {
-      burundiPath: null
+      communePath: null
     };
   }
 
@@ -20,18 +19,19 @@ class BurundiMap extends Component {
     };
     return (
         <div style={style}>
-          <svg width="500px" height="500px"
-               viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet">
-            <path stroke="black" d={this.state.burundiPath}></path>
+          <svg width="100%" height="100%">
+            <path stroke="black" fill="none"
+                  d={this.state.communePath}></path>
           </svg>
         </div>
     );
   }
 
   componentDidMount() {
+    const proj = geoMercator().fitSize([500, 500], burundiTopo[0]);
+    const geoGen = geoPath().projection(proj);
     this.setState({
-      burundiPath: geoPath().projection(geoMercator().scale(500))(
-          topojson.feature(burundiTopo, burundiTopo.objects.burundi))
+      communePath: geoGen(burundiCommunes)
     });
   }
 }
