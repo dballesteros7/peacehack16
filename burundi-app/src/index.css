@@ -5,3 +5,56 @@ html, body, #root {
   width: 100%;
   height: 100%;
 }
+
+div#MainContainer {
+  padding: 20px;
+}
+
+div#MainContainer > div#date,
+div#MainContainer > div#DataContainer {
+  margin-bottom: 30px;
+}
+
+div#MainContainer > div#date > div {
+  display: inline-block;
+  width: 50%;
+  text-align: left;
+}
+
+div#MainContainer > div#date > div + div {
+  text-align: right;
+}
+
+
+div#MainContainer > div#DataContainer > div.data {
+  display: inline-table;
+  border-collapse: collapse;
+  border: 1px solid #000;
+  margin: 5px;
+}
+
+div#MainContainer > div#DataContainer > div.data > div {
+  padding: 2px;
+  display: table-cell;
+  vertical-align: middle;
+  border-right: 1px solid #000;
+}
+
+div#MainContainer > div#DataContainer > div.data > div.block {
+  display: block;
+  border-right: none;
+  border-bottom: 1px solid #000;
+}
+
+div#MainContainer > div#DataContainer > div.data > div.block:last-child {
+  border-bottom: none;
+}
+
+div#MainContainer > div#MoodContainer > div {
+  display: inline-block;
+  width: 33%;
+}
+
+div#MainContainer > div#MoodContainer > div.mood > a > img {
+  width: 30px;
+}
