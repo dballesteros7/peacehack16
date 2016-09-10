@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {geoPath, geoMercator} from 'd3-geo';
 const burundiTopo = require('./burundi.json');
 const burundiCommunes = require('./burundi-communes.json');
+import './BurundiMap.css';
 
 class BurundiMap extends Component {
 
@@ -13,13 +14,9 @@ class BurundiMap extends Component {
   }
 
   render() {
-    const style = {
-      width: '500px',
-      height: '500px'
-    };
     return (
-        <div style={style}>
-          <svg width="100%" height="100%">
+        <div className="map-container">
+          <svg viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet">
             <path stroke="black" fill="none"
                   d={this.state.communePath}></path>
           </svg>
