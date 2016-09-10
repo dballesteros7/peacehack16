@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Dropzone from 'react-dropzone'
+import _ from 'lodash'
 
 class DataDrop extends Component {
 
@@ -18,20 +19,24 @@ class DataDrop extends Component {
         reader.onerror = DataDrop.errorHandler
     }
 
+    // ISO 3166-1 country code,FIPS 5-2 subdivision code, GNS FD, GNS UFI,ISO 639-1 language code, language script, name, latitude, longitude
     static loadHandler(event) {
         let csv = event.target.result
-        let allTextLines = csv.split(/\r\n|\n/)
-        let lines = []
-        for (let i = 0; i < allTextLines.length; i++) {
-            // hope its not much data
-            let data = allTextLines[i].split(';')
-            let tarr = []
-            for (let j = 0; j < data.length; j++) {
-                tarr.push(data[j])
-            }
-            lines.push(tarr)
-        }
-        console.log(lines)
+        let allData = csv.split(/\r\n|\n/)
+        let header = allData.shift()
+
+        this.data = allData
+            .map(r =>
+                // here should be ;
+                r.split(',')
+            ).map(r => ({
+                count: _.parseInt(r[1]),
+                name: r[6],
+                lat: Number(r[7]),
+                lng: Number(r[8])
+            }))
+
+        console.log(header, this.data)
     }
 
     static errorHandler(evt) {
@@ -42,18 +47,7 @@ class DataDrop extends Component {
     }
 
     getData() {
-        return [
-            {
-                lat: 47.0525,
-                long: 4.3837,
-                count: 2
-            },
-            {
-                lat: 47.1525,
-                long: 4.5837,
-                count: 8
-            }
-        ]
+        return this.data
     }
 
     render() {

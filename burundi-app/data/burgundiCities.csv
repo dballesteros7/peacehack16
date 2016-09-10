@@ -1,0 +1,47 @@
+ISO 3166-1 country code,FIPS 5-2 subdivision code, GNS FD, GNS UFI,ISO 639-1 language code, language script, name, latitude, longitude
+BI,9,PPLC,6034031,rn|fr,latin,Bujumbura,-3.3822,29.3644
+BI,12,PPLA,6038674,rn|fr,latin,Cibitoke,-2.8869,29.1248
+BI,20,PPLA,6066239,rn|fr,latin,Rutana,-3.9279,29.992
+BI,16,PPLA,6041109,rn|fr,latin,Kirundo,-2.5845,30.0959
+BI,18,PPLA,6040401,rn|fr,latin,Muyinga,-2.8451,30.3414
+BI,15,PPLA,6039605,rn|fr,latin,Kayanza,-2.9221,29.6293
+BI,10,PPLA,6031981,rn|fr,latin,Bururi,-3.9461,29.6197
+BI,9,ADM1,6037167,fra,latin,Bubanza,-3.116667,29.4
+BI,9,ADM1,6037167,run,latin,Bubanza,-3.116667,29.4
+BI,24,ADM1,11069220,fra,latin,Bujumbura Mairie,-3.384132,29.365542
+BI,24,ADM1,11069220,run,latin,Bujumbura Mairie,-3.384132,29.365542
+BI,25,ADM1,11069218,fra,latin,Bujumbura Rural,-3.461626,29.448776
+BI,25,ADM1,11069218,run,latin,Bujumbura Rural,-3.461626,29.448776
+BI,10,ADM1,6031980,fra,latin,Bururi,-3.85,29.633333
+BI,10,ADM1,6031980,run,latin,Bururi,-3.85,29.633333
+BI,11,ADM1,6036353,run,latin,Cankuzo,-3.133333,30.583333
+BI,11,ADM1,6036353,fra,latin,Cankuzo,-3.133333,30.583333
+BI,12,ADM1,6038673,run,latin,Cibitoke,-2.883333,29.25
+BI,12,ADM1,6038673,fra,latin,Cibitoke,-2.883333,29.25
+BI,13,ADM1,6034924,fra,latin,Gitega,-3.5,29.95
+BI,13,ADM1,6034924,run,latin,Gitega,-3.5,29.95
+BI,14,ADM1,6036871,run,latin,Karuzi,-3.125,30.133333
+BI,14,ADM1,6036871,fra,latin,Karuzi,-3.125,30.133333
+BI,15,ADM1,6039604,fra,latin,Kayanza,-3.066667,29.666667
+BI,15,ADM1,6039604,run,latin,Kayanza,-3.066667,29.666667
+BI,16,ADM1,6041108,fra,latin,Kirundo,-2.583333,30.166667
+BI,16,ADM1,6041108,run,latin,Kirundo,-2.583333,30.166667
+BI,17,ADM1,6030886,fra,latin,Makamba,-4.166667,29.752778
+BI,17,ADM1,6030886,run,latin,Makamba,-4.166667,29.752778
+BI,22,ADM1,6034203,run,latin,Muramvya,-3.25,29.666667
+BI,22,ADM1,6034203,fra,latin,Muramvya,-3.25,29.666667
+BI,18,ADM1,6040400,run,latin,Muyinga,-2.833333,30.333333
+BI,18,ADM1,6040400,fra,latin,Muyinga,-2.833333,30.333333
+BI,20,ADM1,6071351,run,latin,Rutana,-3.866667,30.1
+BI,20,ADM1,6071351,fra,latin,Rutana,-3.866667,30.1
+BI,23,ADM1,6071832,run,latin,Mwaro,-3.5,29.666667
+BI,23,ADM1,6071832,fra,latin,Mwaro,-3.5,29.666667
+BI,19,ADM1,6039220,run,latin,Ngozi,-2.875,29.925
+BI,19,ADM1,6039220,fra,latin,Ngozi,-2.875,29.925
+BI,21,ADM1,6035352,run,latin,Ruyigi,-3.45,30.316667
+BI,21,ADM1,6035352,fra,latin,Ruyigi,-3.45,30.316667
+BI,21,PPLA,6035353,rn|fr,latin,Ruyigi,-3.476389,30.248611
+BI,17,PPLA,6030885,rn|fr,latin,Makamba,-4.1348,29.804
+BI,11,PPLA,6036354,rn|fr,latin,Cankuzo,-3.2186,30.5528
+BI,22,PPLA,6034204,rn|fr,latin,Muramvya,-3.2682,29.6079
+BI,13,PPLA,6034925,rn|fr,latin,Gitega,-3.4264,29.9308
