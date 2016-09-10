@@ -1,0 +1,10 @@
+.map-container {
+  display: flex;
+  flex: 1 0 auto;
+  min-height: 500px;
+  min-width: 500px;
+}
+
+.map-container > svg {
+  flex: 1 0 auto;
+}
