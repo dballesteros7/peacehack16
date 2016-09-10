@@ -1,0 +1,70 @@
+.infoBar {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.infoBar > .headlineRow,
+.infoBar > .demoGenderRow {
+  margin-bottom: 16px;
+}
+
+.headlineRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.headlineRow {
+  font-size: 24px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, .87)
+}
+
+.headlineRow > .headline-left {
+  flex: 1 0 auto;
+}
+
+.demoGenderRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.demoGenderRow > .demoLabel,
+.demoGenderRow > .genderLabel {
+  font-size: 20px;
+  font-weight: 700;
+  padding-right: 16px;
+}
+
+.demoColumn {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.genderColumn {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.genderChipColumn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.moodRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.themeLabel {
+  font-size: 20px;
+  font-weight: 700;
+  padding-right: 16px;
+}

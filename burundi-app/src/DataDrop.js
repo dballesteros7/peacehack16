@@ -1,6 +1,22 @@
 import React, {Component} from 'react'
 import Dropzone from 'react-dropzone'
+import Paper from 'material-ui/Paper'
 import _ from 'lodash'
+
+const styles = {
+  container: {
+    display: 'flex',
+    flex: '0 0 auto',
+    minHeight: '50px'
+  },
+  zone: {
+    flex: '1 0 auto',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: '14px'
+  }
+};
 
 class DataDrop extends Component {
 
@@ -57,13 +73,13 @@ class DataDrop extends Component {
 
     render() {
         return (
-            <div>
-                <Dropzone
-                    onDrop={DataDrop.onDrop}
-                    accept={"text/csv"}>
-                    <div>Drop your data, or click to select files to upload.</div>
-                </Dropzone>
-            </div>
+            <Paper zDepth={2} style={styles.container}>
+              <Dropzone style={styles.zone}
+                  onDrop={DataDrop.onDrop}
+                  accept={"text/csv"}>
+                  <div>Drop your data, or click to select files to upload.</div>
+              </Dropzone>
+            </Paper>
         )
     }
 }
