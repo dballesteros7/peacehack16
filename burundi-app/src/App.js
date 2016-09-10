@@ -16,4 +16,10 @@ class App extends Component {
   }
 }
 
+setTimeout(() => {
+  DataDrop.getData().then(console.warn)
+  // promise
+  console.warn(DataDrop.getData())
+}, 3000)
+
 export default App;

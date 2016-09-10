@@ -6,10 +6,16 @@ class DataDrop extends Component {
 
     constructor(props) {
         super(props)
-        this.data = props.data || []
+
         if (!window.FileReader) {
-            alert('FileReader are not supported in this browser.')
+            alert('Please use modern browser.')
         }
+
+        // deferred object
+        DataDrop.data = new Promise((res, rej) => {
+            DataDrop.resolve = res
+            DataDrop.reject = rej
+        })
     }
 
     static onDrop(files) {
@@ -21,11 +27,12 @@ class DataDrop extends Component {
 
     // ISO 3166-1 country code,FIPS 5-2 subdivision code, GNS FD, GNS UFI,ISO 639-1 language code, language script, name, latitude, longitude
     static loadHandler(event) {
-        let csv = event.target.result
-        let allData = csv.split(/\r\n|\n/)
-        let header = allData.shift()
+        let allData = event.target.result.split(/\r\n|\n/)
 
-        this.data = allData
+        // drop header
+        allData.shift()
+
+        DataDrop.resolve(allData
             .map(r =>
                 // here should be ;
                 r.split(',')
@@ -34,9 +41,7 @@ class DataDrop extends Component {
                 name: r[6],
                 lat: Number(r[7]),
                 lng: Number(r[8])
-            }))
-
-        console.log(header, this.data)
+            })))
     }
 
     static errorHandler(evt) {
@@ -46,8 +51,8 @@ class DataDrop extends Component {
         return alert(evt.target.error)
     }
 
-    getData() {
-        return this.data
+    static getData() {
+        return DataDrop.data
     }
 
     render() {
