@@ -46,7 +46,7 @@ class DataDrop extends Component {
 
     static errorHandler(evt) {
         if ("NotReadableError" === evt.target.error.name) {
-            return alert("File not redable")
+            return alert("File not readable")
         }
         return alert(evt.target.error)
     }
